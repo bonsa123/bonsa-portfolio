@@ -1106,13 +1106,15 @@ if (fs.existsSync(DIST_DIR)) {
 
 ensureDatabase()
   .then(() => {
-    app.listen(PORT, () => {
-      console.log(`\n✅ Portfolio API running at http://localhost:${PORT}`)
-      console.log(`   Database: portfolio_db`)
+    app.listen(PORT, '0.0.0.0', () => {
+      console.log(`\n✅ Portfolio API running on port ${PORT}`)
       console.log(`   Admin password: ${ADMIN_PASSWORD}\n`)
     })
   })
   .catch((error) => {
+    console.error('Failed to initialize database:', error)
+    process.exit(1)
+  })
     console.error('Failed to initialize database:', error)
     process.exit(1)
   })
