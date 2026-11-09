@@ -3,20 +3,22 @@ import dotenv from 'dotenv'
 
 dotenv.config()
 
-// Support both DATABASE_URL (Railway/Render/Aiven) and individual env vars
-const dbConfig = process.env.DATABASE_URL
+const connectionUri = process.env.DATABASE_URL || process.env.MYSQL_URL || process.env.MYSQLURL
+
+// Support DATABASE_URL / MYSQL_URL (Railway/Render/Aiven) and individual env vars
+const dbConfig = connectionUri
   ? {
-      uri: process.env.DATABASE_URL,
+      uri: connectionUri,
       waitForConnections: true,
       connectionLimit: 10,
       queueLimit: 0,
     }
   : {
-      host: process.env.DB_HOST || 'localhost',
-      port: Number(process.env.DB_PORT || 3306),
-      user: process.env.DB_USER || 'root',
-      password: process.env.DB_PASSWORD || '',
-      database: process.env.DB_NAME || 'portfolio_db',
+      host: process.env.DB_HOST || process.env.MYSQLHOST || 'localhost',
+      port: Number(process.env.DB_PORT || process.env.MYSQLPORT || 3306),
+      user: process.env.DB_USER || process.env.MYSQLUSER || 'root',
+      password: process.env.DB_PASSWORD || process.env.MYSQLPASSWORD || '',
+      database: process.env.DB_NAME || process.env.MYSQLDATABASE || 'portfolio_db',
       waitForConnections: true,
       connectionLimit: 10,
       queueLimit: 0,
