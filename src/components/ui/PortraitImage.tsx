@@ -1,6 +1,6 @@
 import { useState, useRef } from 'react'
 import { motion, useMotionValue, useSpring, useReducedMotion } from 'framer-motion'
-import fallbackPhoto from '../../assets/bonsa.jpg'
+import fallbackPhoto from '../../assets/bonsa.png'
 
 interface PortraitImageProps {
   src?: string
@@ -82,12 +82,6 @@ export default function PortraitImage({
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
     >
-      {/* Ambient background glow */}
-      <div
-        className="pointer-events-none absolute inset-0 -top-6 -bottom-6 rounded-full opacity-20 blur-2xl"
-        style={{ background: 'radial-gradient(circle, #E07A3C 0%, transparent 70%)' }}
-      />
-
       {/* Direct Cutout Photo — No frame, No bounding background box */}
       <div className="relative h-full w-full flex items-end justify-center">
         {loading ? (

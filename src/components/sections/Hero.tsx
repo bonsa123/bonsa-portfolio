@@ -476,9 +476,6 @@ export default function Hero({ onOpenResume }: HeroProps) {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
             >
-              {/* Soft ambient center glow */}
-              <div className="pointer-events-none absolute inset-0 -z-10 rounded-full bg-[radial-gradient(ellipse_at_center,rgba(224,122,60,0.14),transparent_70%)]" />
-
               {/* Floating Card: Experience (Bottom-Left) */}
               <FloatingCard
                 label={content.heroExperienceLabel}
@@ -736,9 +733,6 @@ export default function Hero({ onOpenResume }: HeroProps) {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1.0, ease: [0.22, 1, 0.36, 1], delay: 0.25 }}
           >
-            {/* Very soft glow behind portrait — no animations */}
-            <div className="pointer-events-none absolute inset-0 -z-10 rounded-full bg-[radial-gradient(ellipse_at_center,rgba(224,122,60,0.09),transparent_70%)]" />
-
             {/* Portrait */}
             <PortraitImage size="lg" src={photoUrl || undefined} alt={profile.name} loading={profileLoading} />
           </motion.div>

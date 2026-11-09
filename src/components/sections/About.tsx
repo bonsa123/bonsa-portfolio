@@ -12,7 +12,7 @@ import {
 import Container from '../ui/Container'
 import Reveal from '../ui/Reveal'
 import { useProjects } from '../../hooks/useProjects'
-import fallbackPhoto from '../../assets/bonsa.jpg'
+import fallbackPhoto from '../../assets/bonsa.png'
 
 interface AboutProps {
   onOpenResume?: () => void

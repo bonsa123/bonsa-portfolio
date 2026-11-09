@@ -3,16 +3,16 @@ export const personalInfo = {
   title: 'Computer Science Student',
   subtitle: 'Aspiring Software Developer',
   intro:
-    "I'm a Computer Science student at Haramaya University, passionate about software development, web technologies, databases, and building practical solutions to real-world problems.",
+    'I study Computer Science at Haramaya University and enjoy building web applications. I work with technologies such as PHP, MySQL, JavaScript, and Node.js, turning ideas into practical projects.',
   about: [
     "I'm currently pursuing my Bachelor's degree in Computer Science at Haramaya University, where I'm developing a strong foundation in programming, algorithms, data structures, and software engineering principles.",
     'I enjoy building real-world applications that solve meaningful problems. My main project, the Gindo Student Registration System, gave me hands-on experience with full-stack web development using PHP and MySQL.',
     "I'm continuously expanding my skills across multiple programming languages and technologies. I believe in writing clean, maintainable code and learning something new every day.",
   ],
-  email: 'bonsamuluneh@gmail.com',
+  email: 'bonsamuluneh7@gmail.com',
   phone: '+251929495184',
   location: 'Ethiopia',
-  photoUrl: '',
+  photoUrl: '/uploads/photo-5cae6726-7aee-40fc-a1b6-d328df02f70e.png',
   resumeUrl: '/resume.pdf',
   social: {
     github: 'https://github.com/bonsa123',

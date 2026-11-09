@@ -32,7 +32,7 @@ import axios from 'axios'
 import Button from '../components/ui/Button'
 import { Certificate, ContactMessage, EducationEntry, PortfolioContent, Project, SkillCategory } from '../types'
 import { defaultPortfolioContent } from '../data/portfolio'
-import fallbackPhoto from '../assets/bonsa.jpg'
+import fallbackPhoto from '../assets/bonsa.png'
 
 /* ── Photo Upload widget ──────────────────────────────── */
 function PhotoUpload({
